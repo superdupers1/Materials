@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MaterialsModelStoreContainer" CdmEntityContainer="MaterialsEntities">
+    <EntitySetMapping Name="Buildings">
+      <EntityTypeMapping TypeName="MaterialsModel.Buildings">
+        <MappingFragment StoreEntitySet="Buildings">
+          <ScalarProperty Name="PKBuilding" ColumnName="PKBuilding" />
+          <ScalarProperty Name="Building" ColumnName="Building" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="MaterialsModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="PKCustomers" ColumnName="PKCustomers" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="FKBuilding" ColumnName="FKBuilding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartNumbers">
+      <EntityTypeMapping TypeName="MaterialsModel.PartNumbers">
+        <MappingFragment StoreEntitySet="PartNumbers">
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="FKCustomer" ColumnName="FKCustomer" />
+          <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+          <ScalarProperty Name="PKPartNumber" ColumnName="PKPartNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

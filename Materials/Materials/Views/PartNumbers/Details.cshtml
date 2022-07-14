@@ -1,0 +1,42 @@
+﻿@model Materials.Models.PartNumbers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PartNumbers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PartNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Available)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.Customer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.Customer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PKPartNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
